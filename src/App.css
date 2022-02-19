@@ -6,13 +6,77 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+*{
+  background-color: rgb(22,36,39);
+  color: rgb(180,170,154);
+}
+a{
+  color:#61dafb;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.spinner {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
+.spinner:after {
+  animation: changeContent .8s linear infinite;
+  display: block;
+  content: "⠋";
+  font-size: 80px;
+}
+
+@keyframes changeContent {
+  10% { content: "⠙"; }
+  20% { content: "⠹"; }
+  30% { content: "⠸"; }
+  40% { content: "⠼"; }
+  50% { content: "⠴"; }
+  60% { content: "⠦"; }
+  70% { content: "⠧"; }
+  80% { content: "⠇"; }
+  90% { content: "⠏"; }
+}
+
+#indiv{
+  width: 70%;
+  margin: auto;
+  transition: all 0.5s;
+  border: 1px solid lightblue;
+}
+#indiv:hover{
+  transform: scale(1.1);
+}
+#img{
+  width: 100%;
+  height: 100%;
+}
+a{
+  transition: all 0.5s;
+
+}
+a:hover{
+  color: whitesmoke;
+}
+.inline{
+  display: inline-block;
+}
+.textdeconull{
+  text-decoration: none;
+}
+.flex{
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 23px;
+
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
